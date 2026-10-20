@@ -1,0 +1,24 @@
+name: Diagnóstico de permissões
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/diag.yml']
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Permissões do GITHUB_TOKEN
+        run: |
+          echo "--- repos ---"
+          gh api /repos/${{ github.repository }} --jq '.permissions' || true
+          echo "--- headers do token ---"
+          gh api -i /user 2>/dev/null | grep -i "x-oauth-scopes" || true
+          echo "--- settings do workflow ---"
+          gh api /repos/${{ github.repository }}/actions/permissions/workflow || true
+      - name: Tentar criar o Pages site
+        run: |
+          gh api -X POST /repos/${{ github.repository }}/pages \
+            -f "source[branch]=main" -f "source[path]=/" || true
