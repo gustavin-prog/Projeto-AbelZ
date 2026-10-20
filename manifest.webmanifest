@@ -1,0 +1,80 @@
+{
+  "id": "/",
+  "name": "Escola Estadual Professor Abel Freire Coelho",
+  "short_name": "Abel Coelho",
+  "description": "Página institucional da Escola Estadual Professor Abel Freire Coelho (Mossoró/RN): endereço, telefone, zona de localização e oferta acadêmica (Ensino Médio Regular e Curso Técnico Integrado / Educação Profissional).",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait-primary",
+  "background_color": "#0b1220",
+  "theme_color": "#123a75",
+  "categories": ["education", "government", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Oferta acadêmica",
+      "short_name": "Oferta",
+      "description": "Etapas do Ensino: Ensino Médio Regular e Curso Técnico Integrado",
+      "url": "./index.html#oferta",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Endereço e telefone",
+      "short_name": "Contato",
+      "description": "CEP 59610-200, telefone (84) 3315-5658 e zona urbana",
+      "url": "./index.html#endereco",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/screenshot-desktop-1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Página institucional da Escola Estadual Professor Abel Freire Coelho"
+    },
+    {
+      "src": "screenshots/screenshot-mobile-540x960.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Página institucional no celular"
+    }
+  ]
+}

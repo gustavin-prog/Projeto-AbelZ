@@ -1,0 +1,18 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Servidores locais / builds
+.serve/
+dist/
+build/
+.cache/
+
+# Editores
+.vscode/
+.idea/
+*.swp
