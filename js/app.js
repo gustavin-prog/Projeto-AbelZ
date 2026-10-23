@@ -166,6 +166,27 @@
     showToast('App instalado com sucesso!');
   });
 
+  /* ---------------- Tela de carregamento (splash) ---------------- */
+  var splash = document.getElementById('splash');
+
+  function dismissSplash() {
+    if (!splash || !splash.isConnected) return;
+    if (splash.classList.contains('is-hidden')) return;
+    splash.classList.add('is-hidden');
+    window.setTimeout(function () {
+      if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+    }, 800);
+  }
+
+  function startSplash() {
+    if (!splash) return;
+    splash.classList.add('is-visible');
+    window.setTimeout(dismissSplash, 2400);
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') startSplash();
+  else window.addEventListener('load', startSplash);
+
   /* ---------------- Registro do Service Worker ---------------- */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {

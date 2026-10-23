@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Escola Estadual Professor Abel Freire Coelho | Mossoró-RN</title>
+<title>Submundo do Abel</title>
 <meta name="description" content="Página institucional da Escola Estadual Professor Abel Freire Coelho (Mossoró/RN). Endereço, telefone, zona de localização e oferta acadêmica: Ensino Médio Regular e Curso Técnico Integrado / Educação Profissional.">
 <meta name="author" content="Escola Estadual Professor Abel Freire Coelho">
 <meta name="theme-color" content="#123a75">
@@ -21,9 +21,10 @@
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Escola Estadual Professor Abel Freire Coelho">
+<meta property="og:title" content="Submundo do Abel">
 <meta property="og:description" content="Mossoró/RN • Ensino Médio Regular e Curso Técnico Integrado / Educação Profissional.">
 <meta property="og:image" content="icons/icon-512.png">
+<meta property="og:image:alt" content="Logo da Escola Estadual Professor Abel Freire Coelho">
 <meta name="twitter:card" content="summary">
 
 <link rel="stylesheet" href="css/styles.css">
@@ -55,6 +56,12 @@
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+<div class="splash" id="splash" aria-hidden="true">
+  <img class="splash__logo" src="images.jpeg" alt="Logo Submundo do Abel" width="220" height="220">
+  <p class="splash__title">Submundo do Abel</p>
+  <p class="splash__subtitle">Escola Estadual • Mossoró/RN</p>
+</div>
+
 <div class="topbar" id="statusbar" hidden>
   <span class="topbar__dot" aria-hidden="true"></span>
   <span id="statusbar-text">Você está offline — exibindo a versão em cache.</span>
@@ -63,9 +70,9 @@
 <header class="header" id="header">
   <div class="header__inner container">
     <a class="brand" href="#topo" aria-label="Ir para o início">
-      <img class="brand__mark" src="icons/icon-192.png" alt="" width="44" height="44">
+      <img class="brand__mark" src="images.jpeg" alt="" width="48" height="48">
       <span class="brand__text">
-        <strong>Abel Freire Coelho</strong>
+        <strong>Submundo do Abel</strong>
         <small>Escola Estadual • Mossoró/RN</small>
       </span>
     </a>
@@ -74,6 +81,8 @@
       <a href="#instituicao">Instituição</a>
       <a href="#oferta">Oferta Acadêmica</a>
       <a href="#infraestrutura">Infraestrutura</a>
+      <a href="#alunos">Para alunos</a>
+      <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
 
@@ -97,10 +106,13 @@
   <section class="hero" id="topo">
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="container hero__inner">
+      <img class="hero__logo" src="icons/logo-full.jpg"
+           alt="Logo da Escola Estadual Professor Abel Freire Coelho"
+           width="439" height="317">
       <p class="hero__eyebrow">
         <span class="pill pill--light">Rede Estadual • Rio Grande do Norte</span>
       </p>
-      <h1 class="hero__title">Escola Estadual<br><span>Professor Abel Freire Coelho</span></h1>
+      <h1 class="hero__title">Submundo do Abel</h1>
       <p class="hero__lead">
         Página institucional oficial. Conheça o endereço, o telefone, a zona de localização
         e toda a oferta acadêmica da escola.
@@ -332,6 +344,88 @@
     </div>
   </section>
 
+  <!-- PARA OS ALUNOS -->
+  <section class="section section--alt" id="alunos">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__eyebrow">Estudantes</p>
+        <h2 class="section__title">Para os alunos</h2>
+        <p class="section__lead">
+          Informações do dia a dia, avisos e horários do turno da escola.
+        </p>
+      </header>
+
+      <div class="grid grid--2">
+        <article class="panel">
+          <h3 class="panel__title">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            Turno da tarde
+          </h3>
+          <dl class="data-list">
+            <div class="data-list__row">
+              <dt>Turno</dt>
+              <dd><span class="pill pill--ok">Tarde</span></dd>
+            </div>
+            <div class="data-list__row">
+              <dt>Horário</dt>
+              <dd><strong>11:40 — 18:00</strong></dd>
+            </div>
+            <div class="data-list__row">
+              <dt>Observação</dt>
+              <dd>Horário de permanência da escola no turno da tarde.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="panel">
+          <h3 class="panel__title">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+            Quadro de avisos
+          </h3>
+          <ul class="avisos">
+            <li><strong>Conselho de classe:</strong> reuniões pedagógicas seguem a agenda da coordenação.</li>
+            <li><strong>Material didático:</strong> entregas de apostilas e cadernos devem ser feitas nas salas de aula.</li>
+            <li><strong>Atividades pedagógicas:</strong> laboratório de informática, biblioteca e quadra esportiva participam das atividades extracurriculares.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE O CRIADOR -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__eyebrow">Comunidade</p>
+        <h2 class="section__title">Sobre o criador</h2>
+        <p class="section__lead">
+          Informações sobre quem desenvolve e mantém esta página.
+        </p>
+      </header>
+
+      <div class="panel">
+        <h3 class="panel__title">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Informações do criador
+        </h3>
+        <dl class="data-list">
+          <div class="data-list__row">
+            <dt>Nome</dt>
+            <dd><strong>Flávio Gustavo</strong></dd>
+          </div>
+          <div class="data-list__row">
+            <dt>Classe</dt>
+            <dd><strong>3º Info</strong></dd>
+          </div>
+          <div class="data-list__row">
+            <dt>Escola</dt>
+            <dd><strong>E. E. Prof. Abel Coelho</strong></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTATO -->
   <section class="section" id="contato">
     <div class="container">
@@ -362,7 +456,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <img src="icons/icon-192.png" alt="" width="40" height="40">
+      <img src="icons/logo-emblem.png" alt="" width="132" height="81">
       <div>
         <strong>Escola Estadual Professor Abel Freire Coelho</strong>
         <span>Rua Doutor João Marcelino, s/n — Nova Betânia • Mossoró/RN • CEP 59610-200</span>
@@ -373,6 +467,8 @@
       <a href="#endereco">Endereço</a>
       <a href="#oferta">Oferta acadêmica</a>
       <a href="#infraestrutura">Infraestrutura</a>
+      <a href="#alunos">Para alunos</a>
+      <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
     <p class="footer__note">

@@ -3,7 +3,7 @@
    Service Worker — cache offline da página institucional
    ========================================================= */
 
-const VERSION = 'v1.0.0';
+const VERSION = 'v1.2.0';
 const CACHE_NAME = `abel-coelho-${VERSION}`;
 
 const PRECACHE_URLS = [
@@ -19,7 +19,11 @@ const PRECACHE_URLS = [
   './icons/icon-512.png',
   './icons/icon-maskable-192.png',
   './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png'
+  './icons/apple-touch-icon.png',
+  './icons/logo-mark.png',
+  './icons/logo-emblem.png',
+  './icons/logo-full.jpg',
+  './images.jpeg'
 ];
 
 self.addEventListener('install', (event) => {

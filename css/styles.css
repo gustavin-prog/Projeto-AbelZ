@@ -93,6 +93,36 @@ html[data-theme="dark"] a { color: #5eead4; }
   background: #7c2d12; margin-right: .5rem; vertical-align: middle;
 }
 
+/* ---------------- Tela de carregamento (splash) ---------------- */
+.splash {
+  position: fixed; inset: 0; z-index: 200;
+  display: grid; place-content: center; justify-items: center; align-content: center; gap: .3rem;
+  background:
+    radial-gradient(700px 380px at 50% 28%, rgba(251, 191, 36, .16), transparent 70%),
+    linear-gradient(150deg, #0b1f3f 0%, #123a75 55%, #0e7490 100%);
+  opacity: 1; visibility: visible;
+}
+.splash.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .6s ease, visibility .6s ease; }
+.splash__logo {
+  display: block; width: min(220px, 56vw); height: auto;
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .45));
+  animation: splash-pop 1s cubic-bezier(.22, 1, .36, 1) both;
+}
+@keyframes splash-pop {
+  from { opacity: 0; transform: scale(.6); }
+  to { opacity: 1; transform: scale(1); }
+}
+.splash__title {
+  margin: 1rem 0 0; font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800;
+  letter-spacing: -.02em; color: #fff; text-align: center;
+  animation: splash-rise 1s .3s ease both;
+}
+.splash__subtitle { margin: 0; color: rgba(255, 255, 255, .75); font-size: .95rem; animation: splash-rise 1s .5s ease both; }
+@keyframes splash-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ---------------- Header ---------------- */
 .header {
   position: sticky; top: 0; z-index: 50;
@@ -106,7 +136,7 @@ html[data-theme="dark"] a { color: #5eead4; }
 }
 
 .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: inherit; margin-right: auto; }
-.brand__mark { border-radius: 12px; box-shadow: var(--shadow); flex: none; }
+.brand__mark { flex: none; display: block; width: 48px; height: 48px; object-fit: contain; border-radius: 12px; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand__text strong { font-size: 1rem; letter-spacing: -.01em; }
 .brand__text small { color: var(--muted); font-size: .78rem; }
@@ -177,6 +207,15 @@ html[data-theme="dark"] .btn--soft:hover { color: #7dd3fc; }
     radial-gradient(700px 400px at 10% 90%, rgba(14, 165, 233, .35), transparent 70%);
 }
 .hero__inner { position: relative; }
+.hero__logo {
+  display: block;
+  width: min(290px, 60vw); height: auto;
+  margin-bottom: 1.5rem;
+  padding: .7rem .9rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 22px 45px -24px rgba(0, 0, 0, .75);
+}
 .hero__eyebrow { margin-bottom: 1rem; }
 
 .pill {
@@ -291,6 +330,11 @@ html[data-theme="dark"] .check-list li::before { border-color: #5eead4; }
 html[data-theme="dark"] .notice svg { stroke: #5eead4; }
 .notice p { margin: 0; font-size: .95rem; }
 
+.avisos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.avisos li { position: relative; padding-left: 1.35rem; color: var(--muted); font-size: .95rem; }
+.avisos li::before { content: ""; position: absolute; left: 0; top: .55em; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); }
+.avisos strong { color: var(--text); }
+
 /* Infraestrutura */
 .tags { list-style: none; margin: 0 0 2rem; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .tags li {
@@ -330,7 +374,7 @@ html[data-theme="dark"] .metric strong { color: #7dd3fc; }
 .footer { background: var(--bg-soft); border-top: 1px solid var(--border); padding: 2.5rem 0; }
 .footer__inner { display: grid; gap: 1.25rem; }
 .footer__brand { display: flex; gap: .85rem; align-items: center; }
-.footer__brand img { border-radius: 10px; }
+.footer__brand img { flex: none; width: 132px; height: auto; }
 .footer__brand div { display: flex; flex-direction: column; }
 .footer__brand strong { font-size: .95rem; }
 .footer__brand span { color: var(--muted); font-size: .85rem; }

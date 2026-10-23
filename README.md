@@ -39,7 +39,11 @@ Dados públicos do Censo Escolar/INEP e consulta de CEP (ViaCEP).
 │   ├── icon-512.png         # ícone "any" 512×512
 │   ├── icon-maskable-192.png# ícone "maskable" 192×192
 │   ├── icon-maskable-512.png# ícone "maskable" 512×512
-│   └── apple-touch-icon.png # 180×180 (iOS)
+│   ├── apple-touch-icon.png # 180×180 (iOS)
+│   ├── logo-mark.png        # símbolo do logo (fundo transparente) — cabeçalho
+│   ├── logo-emblem.png      # símbolo + barras (fundo transparente) — rodapé
+│   └── logo-full.jpg        # logo completo com texto — destaque no topo
+├── images.jpeg              # logo original enviado (fonte de todos os derivados)
 ├── screenshots/
 │   ├── screenshot-desktop-1280x720.png
 │   └── screenshot-mobile-540x960.png
